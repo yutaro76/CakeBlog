@@ -26,6 +26,7 @@ class PostsSeed extends AbstractSeed
                 'description' => 'first description',
                 'body' => 'first body',
                 'published' => 1,
+                'user_id' => 1,
                 'created' => '2023-10-29 10:00:00',
                 'modified' => '2023-10-29 10:00:00'
             ],[
@@ -33,6 +34,7 @@ class PostsSeed extends AbstractSeed
                 'description' => 'second description',
                 'body' => 'second body',
                 'published' => 1,
+                'user_id' => 1,
                 'created' => '2023-10-29 10:30:00',
                 'modified' => '2023-10-29 10:30:00'
             ],[
@@ -40,6 +42,7 @@ class PostsSeed extends AbstractSeed
                 'description' => 'test tile description',
                 'body' => 'test tile body',
                 'published' => 1,
+                'user_id' => 1,
                 'created' => '2023-05-01 10:30:00',
                 'modified' => '2023-05-01 10:30:00'
             ],[
@@ -47,6 +50,7 @@ class PostsSeed extends AbstractSeed
                 'description' => 'not displayed tile description',
                 'body' => 'not displayed tile body',
                 'published' => 0,
+                'user_id' => 2,
                 'created' => '2023-05-03 10:30:00',
                 'modified' => '2023-05-03 10:30:00'
             ],[
@@ -54,6 +58,7 @@ class PostsSeed extends AbstractSeed
                 'description' => 'last tile description',
                 'body' => 'last tile body',
                 'published' => 0,
+                'user_id' => 2,
                 'created' => '2023-05-04 10:30:00',
                 'modified' => '2023-05-04 10:30:00'
             ],            

@@ -222,3 +222,5 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
+msgid "User"
+msgstr "ユーザー"
