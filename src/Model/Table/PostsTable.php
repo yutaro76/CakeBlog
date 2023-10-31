@@ -45,6 +45,12 @@ class PostsTable extends Table
 
         $this->addBehavior('Timestamp');
         $this->belongsTo('Users');
+
+        $this->belongsToMany('Tags', [
+            'foreignKey' => 'post_id',
+            'targetForeignKey' => 'tag_id',
+            'joinTable' => 'posts_tags'
+        ]);
     }
 
     /**
