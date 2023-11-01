@@ -25,6 +25,7 @@ class PostsController extends AdminController
     {
         parent::initialize();
         $this->loadModel('Users');
+        $this->loadModel('Tags');
     }
     /**
      * Index method
@@ -72,7 +73,8 @@ class PostsController extends AdminController
             $this->Flash->error(__('The post could not be saved. Please, try again.'));
         }
         $users = $this->Users->find('list');
-        $this->set(compact('post', 'users'));
+        $tags = $this->Tags->find('list');
+        $this->set(compact('post', 'users', 'tags'));
     }
 
     /**
@@ -85,7 +87,7 @@ class PostsController extends AdminController
     public function edit($id = null)
     {
         $post = $this->Posts->get($id, [
-            'contain' => [],
+            'contain' => ['Tags'],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $post = $this->Posts->patchEntity($post, $this->request->getData());
@@ -97,7 +99,8 @@ class PostsController extends AdminController
             $this->Flash->error(__('The post could not be saved. Please, try again.'));
         }
         $users = $this->Users->find('list');
-        $this->set(compact('post', 'users'));
+        $tags = $this->Tags->find('list');
+        $this->set(compact('post', 'users', 'tags'));
     }
 
     /**
