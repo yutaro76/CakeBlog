@@ -14,7 +14,7 @@
             <?php foreach ($post->tags as $tag): ?>
                 <?php echo $this->Html->link($tag->title, ['action' => 'view', $tag->id]) ?>
                 <?php echo $tag !== end($post->tags) ? ',' : '' ?>
-            <?php endforeach; ?>
+            <?php endforeach; ?> / 
         <?php endif; ?>
     投稿者：<?php echo h($post->user->username) ?>
     </small></p>

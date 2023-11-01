@@ -19,7 +19,7 @@ class PostsController extends AppController
         'order' => [
             'created' => 'desc'
         ],
-        'contain' => 'Users'
+        'contain' => ['Users', 'Tags']
         ];
 
     public function index()
@@ -31,7 +31,7 @@ class PostsController extends AppController
     public function view($id = null)
     {
         $post = $this->Posts->get($id, [
-            'contain' => 'Users'
+            'contain' => ['Users', 'Tags']
         ]);
         $this->set(['post'=>$post]);
         // $this->render('/Posts/index');
