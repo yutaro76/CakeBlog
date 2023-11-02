@@ -49,9 +49,10 @@ class PostsController extends AdminController
     public function view($id = null)
     {
         $post = $this->Posts->get($id, [
-            'contain' => ['Users'],
+            'contain' => ['Users', 'Tags'],
         ]);
 
+        // $tags = $this->Tags->find('list');
         $this->set(compact('post'));
     }
 

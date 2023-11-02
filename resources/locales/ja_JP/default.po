@@ -224,3 +224,6 @@ msgstr ""
 
 msgid "User"
 msgstr "ユーザー"
+
+msgid "Tag"
+msgstr "タグ"

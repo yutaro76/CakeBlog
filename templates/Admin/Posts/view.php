@@ -42,6 +42,24 @@
                     <th><?= __('User') ?></th>
                     <td><?= h($post->user->username) ?></td>
                 </tr>
+                <tr> 
+                    <th><?= __('Tag') ?></th>
+                    <td>
+                        <?php if(is_Array($post->tags)): ?>
+                            <?php sort($post->tags) ?>
+                            <?php for($i = 0; $i <= count($post->tags) -1 ; $i++) { ?>
+                                <?php echo $post->tags[$i]->id; ?>
+                            <?php } ?>
+                        <?php endif; ?>
+                    </td>
+                </tr>
+                
+                
+
+
+                
+                    
+   
             </table>
             <div class="text">
                 <strong><?= __('Description') ?></strong>
